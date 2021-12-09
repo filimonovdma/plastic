@@ -1,6 +1,277 @@
 {% extends 'base.html' %}
+{% load wagtailcore_tags wagtailimages_tags %}
+{% block top_menu %}
 
-{% block body %} {{ page.title }}
+			<div id="content" class="site-content">
+			<div id="primary" class="content-area">
+				<main id="main" class="site-main" role="main" style="padding-top: calc(2.75rem + 87px);">
+
+					<div class="overlay"></div>
+
+		<div class="woocommerce-products-toolbar flex flex-column-md-down flex-row-md-up">
 
 
-{% endblock body %}
+		<div class="flex-1 text-left-md-down text-right-md text-center-lg-up breadcrumbs-column">
+			<nav class="woocommerce-breadcrumb"><a href="https://urbanwear.thunder-stores.com/">Home</a>
+                <span class="breadcrumb-separator">—</span>
+                <a href="https://urbanwear.thunder-stores.com/product-category/outerwear-jackets/">Outerwear &amp; Jackets</a>
+                <span class="breadcrumb-separator">—</span>{{ page.title }}</nav>
+        </div>
+	</div>
+
+
+			<div class="woocommerce-notices-wrapper"></div>
+                    <div id="product-816" class="product type-product post-816 status-publish first instock product_cat-outerwear-jackets product_cat-sweats-hoods has-post-thumbnail featured shipping-taxable purchasable product-type-simple">
+<!--description product -->
+		<div class="product-scrollable-area images-loaded">
+		<div class="summary entry-summary entry-left-summary" style="top: calc(100vh - 436.7px);">
+		<div class="entry-summary-inner">
+			<h1 class="product_title entry-title">{{ page.title }}</h1>
+            <div class="woocommerce-product-details__short-description">
+                <p>{{ page.body|richtext }}</p>
+            <!-- add field -->
+            <ul>
+                {% for field in page.custom_fields.all %}
+                    <li>{{ field.name }} - {{ field.options }}</li>
+                {% endfor %}
+            </ul>
+            <!-- add field -->
+
+<p class="has-small-font-size">
+    INGREDIENTS: Simmondsia Chinensis (Jojoba) Seed Oil*,
+    Argania Spinosa (Argan) Kernel Oil*,
+    Helianthus Annuus (Sunflower) Seed Oil*,
+    Limnanthes Alba (Meadowfoam) Seed Oil*,
+    Punica Granatum (Pomegranate) Seed Oil*,
+    Vaccinium Macrocarpon (Cranberry) Seed Oil*,
+    Rosa Mosqueta (Rosehip) Seed Oil*</p>
+</div>
+		</div>
+	     </div>
+<!-- end description product -->
+
+<!-- фото товара -->
+    	<div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images"
+         data-columns="4" style="opacity: 1; transition: opacity 0.25s ease-in-out 0s;">
+
+	<figure class="woocommerce-product-gallery__wrapper">
+        {% for img in page.gallery_images.all %}
+        {% image img.image width-1000 as photo %}
+            <div data-thumb="{{ photo.url }}" data-thumb-alt="{{ img.caption }}" class="woocommerce-product-gallery__image">
+            <a href="{{ photo.url }}">
+            <img width="1000" height="1250" src="" class='wp-post-image'
+                 alt="{{ img.caption }}" loading="lazy" title="{{ photo.caption }}" date-caption=""
+                     data-src="{{ photo.url }}" data-large_image="{{ photo.url }}"
+                     data-large_image_width="1638" data-large_image_height="2048"
+                 srcset="
+                    {{ photo.url }} 1000w,
+                    {% image img.image width-240 as photo %}
+                    {{ photo.url }} 240w,
+                    {% image img.image width-960 as photo %}
+                    {{ photo.url }} 960w,
+                    {% image img.image width-768 as photo %}
+                    {{ photo.url }}768w,
+                    {% image img.image width-1229 as photo %}
+                    {{ photo.url }} 1229w,
+                    {% image img.image width-1638 as photo %}
+                    {{ photo.url }} 1638w"
+                 sizes="(max-width: 1000px) 100vw, 1000px" style="max-height: calc(436.7px - 2.75rem);">
+            </a></div>
+        {% endfor %}
+
+    </figure>
+</div>
+<!-- фото товара -->
+
+	<div class="summary entry-summary" style="top: calc(100vh - 436.7px);">
+		<h1 class="product_title entry-title">{{ page.title }}</h1>
+        <div class="woocommerce-product-details__short-description">
+	<p>{{ page.body|richtext}}</p>
+            <ul>
+            {% for field in page.custom_fields.all %}
+                <li>{{ field.name }} - {{ field.options }}</li>
+            {% endfor %}
+            </ul>
+        
+<p class="has-small-font-size">INGREDIENTS: Simmondsia Chinensis (Jojoba) Seed Oil*, Argania Spinosa (Argan) Kernel Oil*, Helianthus Annuus (Sunflower) Seed Oil*, Limnanthes Alba (Meadowfoam) Seed Oil*, Punica Granatum (Pomegranate) Seed Oil*, Vaccinium Macrocarpon (Cranberry) Seed Oil*, Rosa Mosqueta (Rosehip) Seed Oil*</p>
+</div>
+<p class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">Р</span>{{ page.price }}</bdi></span></p>
+
+
+	<form class="cart" action="https://urbanwear.thunder-stores.com/product/wool-flannel-winter-shirt/" method="post" enctype="multipart/form-data">
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_61af8065e249c">Wool Flannel Winter Shirt quantity</label>
+		<input type="number" id="quantity_61af8065e249c" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Qty" size="4" placeholder="" inputmode="numeric">
+			</div>
+
+		<button type="submit" name="add-to-cart" value="816" class="single_add_to_cart_button button alt">Купить</button>
+
+			</form>
+
+
+<div class="product_meta">
+
+
+
+	<span class="posted_in">Categories: <a href="https://urbanwear.thunder-stores.com/product-category/outerwear-jackets/" rel="tag">Outerwear &amp; Jackets</a>, <a href="https://urbanwear.thunder-stores.com/product-category/sweats-hoods/" rel="tag">Sweats &amp; Hoods</a></span>
+
+
+</div>
+	</div>
+		</div>
+
+		<div class="clear"></div>
+
+	<section class="related products">
+
+					<h2>Related products</h2>
+
+		<ul class="products columns-4">
+
+
+					<li class="product type-product post-54 status-publish first instock product_cat-sweats-hoods has-post-thumbnail sold-individually shipping-taxable purchasable product-type-simple">
+	<a href="https://urbanwear.thunder-stores.com/product/gaugin-shirt-s-s/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+        <div class="woocommerce-loop-product__images" style="max-height: 573.9px;">
+		<img width="1000" height="1250" src="./Wool Flannel Winter Shirt – Urban Wear tovar_files/HAVEN-Human-Made-Patch-Jacket-_FW21_-NAVY-1_2048x2048-1000x1250.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" srcset="https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Human-Made-Patch-Jacket-_FW21_-NAVY-1_2048x2048-1000x1250.jpeg 1000w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Human-Made-Patch-Jacket-_FW21_-NAVY-1_2048x2048-240x300.jpeg 240w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Human-Made-Patch-Jacket-_FW21_-NAVY-1_2048x2048-960x1200.jpeg 960w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Human-Made-Patch-Jacket-_FW21_-NAVY-1_2048x2048-768x960.jpeg 768w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Human-Made-Patch-Jacket-_FW21_-NAVY-1_2048x2048-1229x1536.jpeg 1229w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Human-Made-Patch-Jacket-_FW21_-NAVY-1_2048x2048.jpeg 1638w" sizes="(max-width: 1000px) 100vw, 1000px"><img width="1000" height="1250" src="./Wool Flannel Winter Shirt – Urban Wear tovar_files/HAVEN-Human-Made-Patch-Jacket-_FW21_-NAVY-2_2048x2048-1000x1250.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail secondary-image" alt="" loading="lazy" srcset="https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Human-Made-Patch-Jacket-_FW21_-NAVY-2_2048x2048-1000x1250.jpeg 1000w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Human-Made-Patch-Jacket-_FW21_-NAVY-2_2048x2048-240x300.jpeg 240w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Human-Made-Patch-Jacket-_FW21_-NAVY-2_2048x2048-960x1200.jpeg 960w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Human-Made-Patch-Jacket-_FW21_-NAVY-2_2048x2048-768x960.jpeg 768w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Human-Made-Patch-Jacket-_FW21_-NAVY-2_2048x2048-1229x1536.jpeg 1229w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Human-Made-Patch-Jacket-_FW21_-NAVY-2_2048x2048.jpeg 1638w" sizes="(max-width: 1000px) 100vw, 1000px">		</div>
+			<div class="woocommerce-LoopProduct-wrapper">
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>425</bdi></span></span>
+	</div>
+	</a>	<div class="woocommerce-LoopProduct-wrapper">
+	<h2 class="woocommerce-loop-product__title">Gaugin Shirt S/S</h2><a href="https://urbanwear.thunder-stores.com/product/wool-flannel-winter-shirt/?add-to-cart=54" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="54" data-product_sku="" aria-label="Add “Gaugin Shirt S/S” to your cart" rel="nofollow">Add to cart</a>	</div>
+	</li>
+
+
+					<li class="product type-product post-111 status-publish outofstock product_cat-outerwear-jackets product_cat-sweats-hoods has-post-thumbnail featured sold-individually shipping-taxable purchasable product-type-simple">
+	<a href="https://urbanwear.thunder-stores.com/product/collar-printed-shirt/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">		<div class="woocommerce-loop-product__images" style="max-height: 236.95px;">
+		<img width="1000" height="1250" src="./Wool Flannel Winter Shirt – Urban Wear tovar_files/HAVEN-Engineered-Garments-Banded-Collar-Shirt-Printed-Plaid-Tan-Purple-1_2048x2048-1000x1250.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" srcset="https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Engineered-Garments-Banded-Collar-Shirt-Printed-Plaid-Tan-Purple-1_2048x2048-1000x1250.jpeg 1000w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Engineered-Garments-Banded-Collar-Shirt-Printed-Plaid-Tan-Purple-1_2048x2048-240x300.jpeg 240w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Engineered-Garments-Banded-Collar-Shirt-Printed-Plaid-Tan-Purple-1_2048x2048-960x1200.jpeg 960w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Engineered-Garments-Banded-Collar-Shirt-Printed-Plaid-Tan-Purple-1_2048x2048-768x960.jpeg 768w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Engineered-Garments-Banded-Collar-Shirt-Printed-Plaid-Tan-Purple-1_2048x2048-1229x1536.jpeg 1229w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Engineered-Garments-Banded-Collar-Shirt-Printed-Plaid-Tan-Purple-1_2048x2048.jpeg 1638w" sizes="(max-width: 1000px) 100vw, 1000px"><img width="1000" height="1250" src="./Wool Flannel Winter Shirt – Urban Wear tovar_files/HAVEN-Engineered-Garments-Banded-Collar-Shirt-Printed-Plaid-Tan-Purple-2_2048x2048-1000x1250.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail secondary-image" alt="" loading="lazy" srcset="https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Engineered-Garments-Banded-Collar-Shirt-Printed-Plaid-Tan-Purple-2_2048x2048-1000x1250.jpeg 1000w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Engineered-Garments-Banded-Collar-Shirt-Printed-Plaid-Tan-Purple-2_2048x2048-240x300.jpeg 240w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Engineered-Garments-Banded-Collar-Shirt-Printed-Plaid-Tan-Purple-2_2048x2048-960x1200.jpeg 960w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Engineered-Garments-Banded-Collar-Shirt-Printed-Plaid-Tan-Purple-2_2048x2048-768x960.jpeg 768w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Engineered-Garments-Banded-Collar-Shirt-Printed-Plaid-Tan-Purple-2_2048x2048-1229x1536.jpeg 1229w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Engineered-Garments-Banded-Collar-Shirt-Printed-Plaid-Tan-Purple-2_2048x2048.jpeg 1638w" sizes="(max-width: 1000px) 100vw, 1000px">		</div>
+			<div class="woocommerce-LoopProduct-wrapper">
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>37</bdi></span></span>
+	</div>
+	</a>	<div class="woocommerce-LoopProduct-wrapper">
+	<h2 class="woocommerce-loop-product__title">Collar Printed Shirt</h2><a href="https://urbanwear.thunder-stores.com/product/collar-printed-shirt/" data-quantity="1" class="button product_type_simple" data-product_id="111" data-product_sku="" aria-label="Read more about “Collar Printed Shirt”" rel="nofollow">Read more</a>	</div>
+	</li>
+
+
+					<li class="product type-product post-139 status-publish instock product_cat-outerwear-jackets product_cat-sweats-hoods has-post-thumbnail featured sold-individually shipping-taxable purchasable product-type-simple">
+	<a href="https://urbanwear.thunder-stores.com/product/faux-fur-panelled-coat/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">		<div class="woocommerce-loop-product__images" style="max-height: 236.95px;">
+		<img width="1000" height="1250" src="./Wool Flannel Winter Shirt – Urban Wear tovar_files/HAVEN-Visvim-Sport-VS-Anorak-2L-GORE-TEX-_FW21_-BLACK-1_2048x2048-1000x1250.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" srcset="https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Visvim-Sport-VS-Anorak-2L-GORE-TEX-_FW21_-BLACK-1_2048x2048-1000x1250.jpeg 1000w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Visvim-Sport-VS-Anorak-2L-GORE-TEX-_FW21_-BLACK-1_2048x2048-240x300.jpeg 240w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Visvim-Sport-VS-Anorak-2L-GORE-TEX-_FW21_-BLACK-1_2048x2048-960x1200.jpeg 960w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Visvim-Sport-VS-Anorak-2L-GORE-TEX-_FW21_-BLACK-1_2048x2048-768x960.jpeg 768w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Visvim-Sport-VS-Anorak-2L-GORE-TEX-_FW21_-BLACK-1_2048x2048-1229x1536.jpeg 1229w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Visvim-Sport-VS-Anorak-2L-GORE-TEX-_FW21_-BLACK-1_2048x2048.jpeg 1638w" sizes="(max-width: 1000px) 100vw, 1000px"><img width="1000" height="1250" src="./Wool Flannel Winter Shirt – Urban Wear tovar_files/HAVEN-Visvim-Sport-VS-Anorak-2L-GORE-TEX-_FW21_-BLACK-2_2048x2048-1000x1250.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail secondary-image" alt="" loading="lazy" srcset="https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Visvim-Sport-VS-Anorak-2L-GORE-TEX-_FW21_-BLACK-2_2048x2048-1000x1250.jpeg 1000w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Visvim-Sport-VS-Anorak-2L-GORE-TEX-_FW21_-BLACK-2_2048x2048-240x300.jpeg 240w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Visvim-Sport-VS-Anorak-2L-GORE-TEX-_FW21_-BLACK-2_2048x2048-960x1200.jpeg 960w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Visvim-Sport-VS-Anorak-2L-GORE-TEX-_FW21_-BLACK-2_2048x2048-768x960.jpeg 768w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Visvim-Sport-VS-Anorak-2L-GORE-TEX-_FW21_-BLACK-2_2048x2048-1229x1536.jpeg 1229w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Visvim-Sport-VS-Anorak-2L-GORE-TEX-_FW21_-BLACK-2_2048x2048.jpeg 1638w" sizes="(max-width: 1000px) 100vw, 1000px">		</div>
+			<div class="woocommerce-LoopProduct-wrapper">
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>1,700</bdi></span></span>
+	</div>
+	</a>	<div class="woocommerce-LoopProduct-wrapper">
+	<h2 class="woocommerce-loop-product__title">Anorak 2L Gore-Text</h2><a href="https://urbanwear.thunder-stores.com/product/wool-flannel-winter-shirt/?add-to-cart=139" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="139" data-product_sku="" aria-label="Add “Anorak 2L Gore-Text” to your cart" rel="nofollow">Add to cart</a>	</div>
+	</li>
+
+
+					<li class="product type-product post-109 status-publish last instock product_cat-outerwear-jackets product_cat-shoes-accessories has-post-thumbnail featured sold-individually shipping-taxable purchasable product-type-simple">
+	<a href="https://urbanwear.thunder-stores.com/product/partition-oversized-coat/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">		<div class="woocommerce-loop-product__images" style="max-height: 236.95px;">
+		<img width="1000" height="1250" src="./Wool Flannel Winter Shirt – Urban Wear tovar_files/HAVEN-Veilance-Partition-LT-Coat-SILTSTONE-1_2048x2048-1000x1250.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" srcset="https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Veilance-Partition-LT-Coat-SILTSTONE-1_2048x2048-1000x1250.jpeg 1000w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Veilance-Partition-LT-Coat-SILTSTONE-1_2048x2048-240x300.jpeg 240w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Veilance-Partition-LT-Coat-SILTSTONE-1_2048x2048-960x1200.jpeg 960w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Veilance-Partition-LT-Coat-SILTSTONE-1_2048x2048-768x960.jpeg 768w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Veilance-Partition-LT-Coat-SILTSTONE-1_2048x2048-1229x1536.jpeg 1229w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Veilance-Partition-LT-Coat-SILTSTONE-1_2048x2048.jpeg 1638w" sizes="(max-width: 1000px) 100vw, 1000px"><img width="1000" height="1250" src="./Wool Flannel Winter Shirt – Urban Wear tovar_files/HAVEN-Veilance-Partition-LT-Coat-SILTSTONE-2_2048x2048-1000x1250.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail secondary-image" alt="" loading="lazy" srcset="https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Veilance-Partition-LT-Coat-SILTSTONE-2_2048x2048-1000x1250.jpeg 1000w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Veilance-Partition-LT-Coat-SILTSTONE-2_2048x2048-240x300.jpeg 240w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Veilance-Partition-LT-Coat-SILTSTONE-2_2048x2048-960x1200.jpeg 960w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Veilance-Partition-LT-Coat-SILTSTONE-2_2048x2048-768x960.jpeg 768w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Veilance-Partition-LT-Coat-SILTSTONE-2_2048x2048-1229x1536.jpeg 1229w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/06/HAVEN-Veilance-Partition-LT-Coat-SILTSTONE-2_2048x2048.jpeg 1638w" sizes="(max-width: 1000px) 100vw, 1000px">		</div>
+			<div class="woocommerce-LoopProduct-wrapper">
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>750</bdi></span></span>
+	</div>
+	</a>	<div class="woocommerce-LoopProduct-wrapper">
+	<h2 class="woocommerce-loop-product__title">Partition Oversized Coat</h2><a href="https://urbanwear.thunder-stores.com/product/wool-flannel-winter-shirt/?add-to-cart=109" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="109" data-product_sku="" aria-label="Add “Partition Oversized Coat” to your cart" rel="nofollow">Add to cart</a>	</div>
+	</li>
+
+
+					<li class="product type-product post-795 status-publish first instock product_cat-outerwear-jackets product_cat-sweats-hoods has-post-thumbnail featured shipping-taxable purchasable product-type-simple">
+	<a href="https://urbanwear.thunder-stores.com/product/human-mande-tshirt/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">		<div class="woocommerce-loop-product__images" style="max-height: 236.95px;">
+		<img width="1000" height="1250" src="./Wool Flannel Winter Shirt – Urban Wear tovar_files/HAVEN-Human-Made-T-Shirt-_2204-_FW21_-BLACK-1_2048x2048-1000x1250.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" srcset="https://urbanwear.thunder-stores.com/wp-content/uploads/2021/11/HAVEN-Human-Made-T-Shirt-_2204-_FW21_-BLACK-1_2048x2048-1000x1250.jpeg 1000w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/11/HAVEN-Human-Made-T-Shirt-_2204-_FW21_-BLACK-1_2048x2048-240x300.jpeg 240w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/11/HAVEN-Human-Made-T-Shirt-_2204-_FW21_-BLACK-1_2048x2048-960x1200.jpeg 960w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/11/HAVEN-Human-Made-T-Shirt-_2204-_FW21_-BLACK-1_2048x2048-768x960.jpeg 768w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/11/HAVEN-Human-Made-T-Shirt-_2204-_FW21_-BLACK-1_2048x2048-1229x1536.jpeg 1229w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/11/HAVEN-Human-Made-T-Shirt-_2204-_FW21_-BLACK-1_2048x2048.jpeg 1638w" sizes="(max-width: 1000px) 100vw, 1000px"><img width="1000" height="1242" src="./Wool Flannel Winter Shirt – Urban Wear tovar_files/HAVEN-Human-Made-T-Shirt-_2204-_FW21_-BLACK-2_2048x2048-1000x1242.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail secondary-image" alt="" loading="lazy" srcset="https://urbanwear.thunder-stores.com/wp-content/uploads/2021/11/HAVEN-Human-Made-T-Shirt-_2204-_FW21_-BLACK-2_2048x2048-1000x1242.jpeg 1000w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/11/HAVEN-Human-Made-T-Shirt-_2204-_FW21_-BLACK-2_2048x2048-242x300.jpeg 242w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/11/HAVEN-Human-Made-T-Shirt-_2204-_FW21_-BLACK-2_2048x2048-966x1200.jpeg 966w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/11/HAVEN-Human-Made-T-Shirt-_2204-_FW21_-BLACK-2_2048x2048-768x954.jpeg 768w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/11/HAVEN-Human-Made-T-Shirt-_2204-_FW21_-BLACK-2_2048x2048-1237x1536.jpeg 1237w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/11/HAVEN-Human-Made-T-Shirt-_2204-_FW21_-BLACK-2_2048x2048.jpeg 1649w" sizes="(max-width: 1000px) 100vw, 1000px">		</div>
+			<div class="woocommerce-LoopProduct-wrapper">
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>125</bdi></span></span>
+	</div>
+	</a>	<div class="woocommerce-LoopProduct-wrapper">
+	<h2 class="woocommerce-loop-product__title">Human Mande Tshirt</h2><a href="https://urbanwear.thunder-stores.com/product/wool-flannel-winter-shirt/?add-to-cart=795" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="795" data-product_sku="" aria-label="Add “Human Mande Tshirt” to your cart" rel="nofollow">Add to cart</a>	</div>
+	</li>
+
+
+		</ul>
+
+	</section>
+	</div>
+
+
+
+
+
+			</main><!-- #main -->
+
+			<div class="woocommerce-store-notice-wrapper"><p class="woocommerce-store-notice demo_store" data-notice-id="cad3d7dc77a4e6bf33239331ef2bdfec">Receive 20% off your next order using code 'smoothielife' <span class="demo-store-sep"></span>Receive 20% off your next order using code 'smoothielife' <span class="demo-store-sep"></span>Receive 20% off your next order using code 'smoothielife' <span class="demo-store-sep"></span>Receive 20% off your next order using code 'smoothielife' <span class="demo-store-sep"></span>Receive 20% off your next order using code 'smoothielife' </p></div>
+		</div><!-- #primary -->
+	</div><!-- #content -->
+
+	<aside class="offcanvases">
+
+	<div id="mobile-menu-wrapper" class="offcanvas offcanvas-left offcanvas-mobile-menu">
+		<div class="offcanvas-close"></div>
+
+	<ul class="categories-list no-list-style no-margin">
+					<li class="cat-item cat-item-37">
+				<span class="cate-item-title">
+					<a href="https://urbanwear.thunder-stores.com/product-category/sweats-hoods/" referrerpolicy="origin">
+						Sweats &amp; Hoods					</a>
+					<span class="cat-item-count count">11</span>
+				</span>
+			</li>
+					<li class="cat-item cat-item-36">
+				<span class="cate-item-title">
+					<a href="https://urbanwear.thunder-stores.com/product-category/outerwear-jackets/" referrerpolicy="origin">
+						Outerwear &amp; Jackets					</a>
+					<span class="cat-item-count count">10</span>
+				</span>
+			</li>
+					<li class="cat-item cat-item-42">
+				<span class="cate-item-title">
+					<a href="https://urbanwear.thunder-stores.com/product-category/bags-backpacks/" referrerpolicy="origin">
+						Bags &amp; Backpacks					</a>
+					<span class="cat-item-count count">6</span>
+				</span>
+			</li>
+					<li class="cat-item cat-item-71">
+				<span class="cate-item-title">
+					<a href="https://urbanwear.thunder-stores.com/product-category/pants-shorts/" referrerpolicy="origin">
+						Pants &amp; Shorts					</a>
+					<span class="cat-item-count count">2</span>
+				</span>
+			</li>
+					<li class="cat-item cat-item-52">
+				<span class="cate-item-title">
+					<a href="https://urbanwear.thunder-stores.com/product-category/shoes-accessories/" referrerpolicy="origin">
+						Shoes &amp; Accessories					</a>
+					<span class="cat-item-count count">15</span>
+				</span>
+			</li>
+				</ul>
+
+	<div class="menu-mobile-menu-container"><ul id="menu-mobile-menu" class="mobile-primary-menu mobile-menu no-list-style no-margin no-padding"><li id="menu-item-473" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-473"><a href="https://urbanwear.thunder-stores.com/product/skincare-gift-card/">Gift Cards</a></li>
+<li id="menu-item-668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-668"><a href="https://urbanwear.thunder-stores.com/the-blog/">The Blog</a></li>
+</ul></div>	</div>
+
+
+	<div class="offcanvas offcanvas-right offcanvas-minicart">
+		<div class="offcanvas-close"></div>
+		<div class="widget woocommerce widget_shopping_cart"><h2 class="widgettitle">Cart</h2><div class="widget_shopping_cart_content">
+
+	<p class="woocommerce-mini-cart__empty-message">No products in the cart.</p>
+
+
+</div></div>
+		<a href="https://urbanwear.thunder-stores.com/" tabindex="1" class="button wc-forward">
+			Continue shopping		</a>
+
+			</div>
+
+		</aside>
+
+
+
+
+
+
+{% endblock top_menu %}

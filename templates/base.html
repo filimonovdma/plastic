@@ -1,4 +1,4 @@
-{% load static wagtailuserbar %}
+{% load static wagtailuserbar wagtailcore_tags wagtailimages_tags %}
 <html class="js" lang="en-US">
 {% block head %}
     {% include "includes/head.html" %}
@@ -6,68 +6,16 @@
 
 
  <body class="home archive post-type-archive post-type-archive-product custom-background wp-custom-logo wp-embed-responsive theme-urban-wear woocommerce-shop woocommerce woocommerce-page woocommerce-demo-store woocommerce-js">
-{% block header %}
+
 
  <div id="page" class="site">
+   <a class="skip-link screen-reader-text" href="https://urbanwear.thunder-stores.com/#content">Skip to content</a>
 
-		<a class="skip-link screen-reader-text" href="https://urbanwear.thunder-stores.com/#content">Skip to content</a>
+{% block header %}
+    {% include "includes/header.html" %}
+{% endblock header %}
 
-
-	<header id="masthead" class="site-header" role="banner">
-		<div id="site-header" class="flex full-width with-bg-image">
-
-
-<div class="flex-1-md-up text-left">
-
-			<ul id="mobile-menu" class="mobile-menu no-list-style no-padding ">
-			<li id="mobile-menu-tool" class="menu-item">
-				<button class="menu-icon"></button>
-			</li>
-		</ul>
-
-	<div id="primary-menu-wrapper" class="hidden-lg-down"><ul id="menu-main-navigation" class="primary-menu no-list-style no-margin no-padding"><li id="menu-item-475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children current-menu-item current_page_item menu-item-475"><a href="https://urbanwear.thunder-stores.com/" aria-current="page">The Shop</a><button class="sub-menu-icon"><span class="screen-reader-text">Menu Toggle</span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="14" height="14" viewBox="0 0 24 24"><path d="M 2.65625 6.25 L 1.34375 7.75 L 11.34375 16.75 L 12 17.34375 L 12.65625 16.75 L 22.65625 7.75 L 21.34375 6.25 L 12 14.65625 Z "></path></svg></button>
-<ul class="sub-menu">
-	<li id="menu-item-650" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item current_page_item menu-item-650"><a href="https://urbanwear.thunder-stores.com/" aria-current="page">All Products</a></li>
-	<li id="menu-item-460" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-460"><a href="https://urbanwear.thunder-stores.com/product-category/shoes-accessories/">Shoes &amp; Accessories</a></li>
-	<li id="menu-item-461" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-461"><a href="https://urbanwear.thunder-stores.com/product-category/sweats-hoods/">Sweats &amp; Hoods</a></li>
-	<li id="menu-item-462" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-462"><a href="https://urbanwear.thunder-stores.com/product-category/bags-backpacks/">Bags &amp; Backpacks</a></li>
-	<li id="menu-item-471" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-471"><a href="https://urbanwear.thunder-stores.com/product/skincare-gift-card/">Gift Cards</a></li>
-</ul>
-</li>
-<li id="menu-item-470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-470"><a href="https://urbanwear.thunder-stores.com/the-blog/">The Blog</a></li>
-</ul></div></div>
-
-<div id="site-identity-wrapper" class="flex-1 text-center-md-up">
-	<div class="mobile-site-logo"><span class="custom-logo-link"><img width="352" height="46" src="./Urban Wear – Fashion &amp; Clothing theme for WooCommerce_files/URBNWR-mobile-logo.png" class="custom-logo" alt="" srcset="https://urbanwear.thunder-stores.com/wp-content/uploads/2021/08/URBNWR-mobile-logo.png 352w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/08/URBNWR-mobile-logo-300x39.png 300w" sizes="(max-width: 352px) 100vw, 352px"></span><span class="screen-reader-text">Urban Wear</span></div><div class="site-logo"><span class="custom-logo-link"><img width="544" height="46" src="./Urban Wear – Fashion &amp; Clothing theme for WooCommerce_files/URBANWEAR-light.png" class="custom-logo" alt="" srcset="https://urbanwear.thunder-stores.com/wp-content/uploads/2021/07/URBANWEAR-light.png 544w, https://urbanwear.thunder-stores.com/wp-content/uploads/2021/07/URBANWEAR-light-300x25.png 300w" sizes="(max-width: 544px) 100vw, 544px"></span><span class="screen-reader-text">Urban Wear</span></div></div>
-
-<div id="secondary-menu-wrapper" class="flex-2-sm-down flex-1 text-right">
-
-	<ul id="menu-site-tools" class="secondary-menu no-list-style no-margin no-padding">
-		<li id="search-site-tool" class="menu-item">
-			<div class="search-wrapper woocommerce widget_product_search"><form role="search" method="get" class="woocommerce-product-search" action="https://urbanwear.thunder-stores.com/">
-	<label class="screen-reader-text" for="woocommerce-product-search-field-0">Search for:</label>
-	<input type="search" id="woocommerce-product-search-field-0" class="search-field" placeholder="Search products…" value="" name="s">
-	<button type="submit" value="Search">Search</button>
-	<input type="hidden" name="post_type" value="product">
-</form>
-</div>		</li>
-
-					<li id="shopping-bag-site-tool" class="menu-item">
-				<button class="menu-icon bag-menu-icon">
-					<span class="screen-reader-text">Minicart Toggle</span>
-
-	<span class="bag-product-count"><span>0</span></span>
-
-				</button>
-			</li>
-			</ul>
-
-</div>
-
-		</div><!-- #site-header -->
-	</header><!-- #masthead -->
-
-
+{% block top_menu %}
 		<div id="content" class="site-content">
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main" role="main" style="padding-top: calc(2.75rem + 93.5px);">
@@ -430,14 +378,14 @@
 					<li class="cat-item cat-item-37">
 				<span class="cate-item-title">
 					<a href="https://urbanwear.thunder-stores.com/product-category/sweats-hoods/" referrerpolicy="origin">
-						Sweats &amp; Hoods					</a>
+						3D принтеры					</a>
 					<span class="cat-item-count count">11</span>
 				</span>
 			</li>
 					<li class="cat-item cat-item-36">
 				<span class="cate-item-title">
 					<a href="https://urbanwear.thunder-stores.com/product-category/outerwear-jackets/" referrerpolicy="origin">
-						Outerwear &amp; Jackets					</a>
+						Пластиковые нити					</a>
 					<span class="cat-item-count count">10</span>
 				</span>
 			</li>
@@ -451,7 +399,7 @@
 					<li class="cat-item cat-item-71">
 				<span class="cate-item-title">
 					<a href="https://urbanwear.thunder-stores.com/product-category/pants-shorts/" referrerpolicy="origin">
-						Pants &amp; Shorts					</a>
+						3D ручки					</a>
 					<span class="cat-item-count count">2</span>
 				</span>
 			</li>
@@ -473,12 +421,12 @@
 		<div class="offcanvas-close"></div>
 		<div class="widget woocommerce widget_shopping_cart"><h2 class="widgettitle">Cart</h2><div class="widget_shopping_cart_content">
 
-	<p class="woocommerce-mini-cart__empty-message">No products in the cart.</p>
+	<p class="woocommerce-mini-cart__empty-message">Нет товаров в корзине.</p>
 
 
 </div></div>
 		<a href="https://urbanwear.thunder-stores.com/" tabindex="1" class="button wc-forward">
-			Continue shopping		</a>
+			Продолжить покупки		</a>
 
 			</div>
 
@@ -503,8 +451,8 @@
 </aside><aside id="woocommerce_layered_nav-2" class="widget woocommerce widget_layered_nav woocommerce-widget-layered-nav"><h4 class="widget-title">Filter by Color</h4><ul class="woocommerce-widget-layered-nav-list"><li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term "><a rel="nofollow" href="https://urbanwear.thunder-stores.com/?filter_color=beige">Beige</a> <span class="count">(2)</span></li><li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term "><a rel="nofollow" href="https://urbanwear.thunder-stores.com/?filter_color=black">Black</a> <span class="count">(7)</span></li><li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term "><a rel="nofollow" href="https://urbanwear.thunder-stores.com/?filter_color=camouflage">Camouflage</a> <span class="count">(2)</span></li><li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term "><a rel="nofollow" href="https://urbanwear.thunder-stores.com/?filter_color=green">Army Green</a> <span class="count">(4)</span></li></ul></aside><aside id="woocommerce_rating_filter-2" class="widget woocommerce widget_rating_filter"><h4 class="widget-title">Average rating</h4><ul><li class="wc-layered-nav-rating"><a href="https://urbanwear.thunder-stores.com/?rating_filter=5"><span class="star-rating"><span style="width:100%">Rated <strong class="rating">5</strong> out of 5</span></span> (2)</a></li></ul></aside>		</div>
 	</aside></div>
 
-{% endblock header %}
-{% block top_menu %}
+
+
 
 {% endblock top_menu %}
 

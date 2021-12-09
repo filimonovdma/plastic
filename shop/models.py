@@ -1,13 +1,12 @@
 from django.db import models
 
-from wagtail.core.models import Page
-
 from modelcluster.fields import ParentalKey
 
 from wagtail.core.models import Page, Orderable
 from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel, InlinePanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.contrib.settings.models import BaseSetting, register_setting
+from wagtail.core.fields import RichTextField
 
 
 class HomePage(Page):
@@ -35,21 +34,29 @@ class Product(Page):
         return context
     sku = models.CharField(max_length=255)
     short_description = models.TextField(blank=True, null=True)
+    body = RichTextField(blank=True)
     price = models.DecimalField(decimal_places=2, max_digits=10)
-    image = models.ForeignKey(
-        'wagtailimages.Image',
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL,
-        related_name='+'
-    )
 
     content_panels = Page.content_panels + [
         FieldPanel('sku'),
         FieldPanel('price'),
-        ImageChooserPanel('image'),
+        InlinePanel('gallery_images', label="Gallery images"),
         FieldPanel('short_description'),
+        FieldPanel('body', classname="full"),
         InlinePanel('custom_fields', label='Custom fields'),
+    ]
+
+
+class ProductGalleryImage(Orderable):
+    page = ParentalKey(Product, on_delete=models.CASCADE, related_name='gallery_images')
+    image = models.ForeignKey(
+        'wagtailimages.Image', on_delete=models.CASCADE, related_name='+'
+    )
+    caption = models.CharField(blank=True, max_length=250)
+
+    panels = [
+        ImageChooserPanel('image'),
+        FieldPanel('caption'),
     ]
 
 

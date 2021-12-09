@@ -1,0 +1,79 @@
+{% load static %}
+
+{% block header %}
+<header id="masthead" class="site-header" role="banner">
+		<div id="site-header" class="flex full-width with-bg-image">
+
+
+<div class="flex-1-md-up text-left">
+
+			<ul id="mobile-menu" class="mobile-menu no-list-style no-padding ">
+			<li id="mobile-menu-tool" class="menu-item">
+				<button class="menu-icon"></button>
+			</li>
+		</ul>
+
+	<div id="primary-menu-wrapper" class="hidden-lg-down"><ul id="menu-main-navigation" class="primary-menu no-list-style no-margin no-padding"><li id="menu-item-475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children current-menu-item current_page_item menu-item-475">
+        <a href="http://127.0.0.1:8000/" aria-current="page">Магазин</a>
+        <button class="sub-menu-icon">
+            <span class="screen-reader-text">Menu Toggle</span>
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="14" height="14" viewBox="0 0 24 24"><path d="M 2.65625 6.25 L 1.34375 7.75 L 11.34375 16.75 L 12 17.34375 L 12.65625 16.75 L 22.65625 7.75 L 21.34375 6.25 L 12 14.65625 Z "></path></svg></button>
+<ul class="sub-menu">
+	<li id="menu-item-650" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item current_page_item menu-item-650">
+        <a href="https://urbanwear.thunder-stores.com/" aria-current="page">Все товары</a></li>
+	<li id="menu-item-460" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-460">
+        <a href="https://urbanwear.thunder-stores.com/product-category/shoes-accessories/">3D принтеры</a></li>
+	<li id="menu-item-461" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-461">
+        <a href="https://urbanwear.thunder-stores.com/product-category/sweats-hoods/">3D ручки</a></li>
+	<li id="menu-item-462" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-462">
+        <a href="https://urbanwear.thunder-stores.com/product-category/bags-backpacks/">Пластиковые нити</a></li>
+	<li id="menu-item-471" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-471">
+        <a href="https://urbanwear.thunder-stores.com/product/skincare-gift-card/">Gift Cards</a></li>
+</ul>
+</li>
+<li id="menu-item-470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-470"><a href="http://127.0.0.1:8000/blog/">Блог</a></li>
+</ul></div></div>
+
+<div id="site-identity-wrapper" class="flex-1 text-center-md-up">
+	<div class="mobile-site-logo"><span class="custom-logo-link">
+        <img width="352" height="46" src="/URBNWR-mobile-logo.png" class="custom-logo" alt=""
+             srcset="URBNWR-mobile-logo.png 352w, https://URBNWR-mobile-logo-300x39.png 300w"
+             sizes="(max-width: 352px) 100vw, 352px"></span>
+        <span class="screen-reader-text">Urban Wear</span>
+    </div>
+    <div class="site-logo"><span class="custom-logo-link">
+        <img width="544" height="46" src="/URBANWEAR-light.png" class="custom-logo"
+             alt="" srcset="https:\/URBANWEAR-light.png 544w, https://URBANWEAR-light-300x25.png 300w"
+             sizes="(max-width: 544px) 100vw, 544px"></span>
+    <span class="screen-reader-text">Urban Wear</span>
+    </div>
+</div>
+
+<div id="secondary-menu-wrapper" class="flex-2-sm-down flex-1 text-right">
+
+	<ul id="menu-site-tools" class="secondary-menu no-list-style no-margin no-padding">
+		<li id="search-site-tool" class="menu-item">
+			<div class="search-wrapper woocommerce widget_product_search">
+                <form role="search" method="get" class="woocommerce-product-search" action="https://urbanwear.thunder-stores.com/">
+	<label class="screen-reader-text" for="woocommerce-product-search-field-0">Поиск :</label>
+	<input type="search" id="woocommerce-product-search-field-0" class="search-field" placeholder="Найти товар…" value="" name="s">
+	<button type="submit" value="Search">Поиск ...</button>
+	<input type="hidden" name="post_type" value="product">
+</form>
+</div>		</li>
+
+					<li id="shopping-bag-site-tool" class="menu-item">
+				<button class="menu-icon bag-menu-icon">
+					<span class="screen-reader-text">Minicart Toggle</span>
+
+	<span class="bag-product-count"><span>0</span></span>
+
+				</button>
+			</li>
+			</ul>
+
+</div>
+
+		</div><!-- #site-header -->
+	</header><!-- #masthead -->
+{% endblock header %}
