@@ -35,8 +35,6 @@ class Product(Page):
         related_name="+",
     )
 
-
-
     sku = models.CharField(max_length=255)
     short_description = models.TextField(blank=True, null=True)
     body = RichTextField(blank=True)
