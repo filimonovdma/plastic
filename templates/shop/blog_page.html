@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
+{% load wagtailcore_tags %}
 
 {% block body %} {{ page.title }}
+    {% include_block page.body %}
 
 
 {% endblock body %}
