@@ -1,3 +1,11 @@
 [
+  {"model": "shop.product", "pk": 5, "fields":
+          {"header_image": 1,
+            "sku": "324454",
+            "short_description": "SHORT 7777 DESCRIPTION",
+            "body": "<p data-block-key=\"5dn8w\">BODY</p>",
+            "price": "1500.77"
+          }
+    }
 
 ]
